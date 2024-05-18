@@ -2,11 +2,8 @@
 
 namespace BusinessObjects.DBModels;
 
-public class Entity<TId> where TId : IEquatable<TId>
+public class Entity
 {
-    [Key]
-    public TId Id { get; set; }
-
     public DateTime? Created { get; set; }
 
     public DateTime? Modified {  get; set; }

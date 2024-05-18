@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BusinessObjects.DBModels;
 
-public class Shop : Entity<Guid>
+public class Shop : Entity
 {
+    [Key]
+    public Guid Id { get; set; }
+
     [Required]
     public string Name { get; set; } = string.Empty;
 
@@ -16,5 +14,5 @@ public class Shop : Entity<Guid>
 
     public string? AvatarUrl { get; set; }
 
-    public ICollection<Costume> Costumes { get; set; } = new List<Costume>();
+    public ICollection<Costume> Costumes { get; set; } = [];
 }
