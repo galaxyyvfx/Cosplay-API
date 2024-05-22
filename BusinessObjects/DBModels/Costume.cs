@@ -14,4 +14,8 @@ public class Costume : Entity
 
     [Required]
     public Shop Shop { get; set; } = new();
+    [Required]
+    public ICollection<CostumeTag> CostumeTag{ get; set; } = [];
+    [Required]
+    public ICollection<CostumeImage> CostumeImage { get; set; } = [];
 }

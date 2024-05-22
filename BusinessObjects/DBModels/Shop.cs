@@ -15,4 +15,6 @@ public class Shop : Entity
     public string? AvatarUrl { get; set; }
 
     public ICollection<Costume> Costumes { get; set; } = [];
+    [Required]
+    public ICollection<Employee> Employees { get; set; } = [];
 }
