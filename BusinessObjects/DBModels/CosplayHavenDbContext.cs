@@ -62,5 +62,12 @@ public class CosplayHavenDbContext : DbContext
     public DbSet<Shop> Shops { get; set; }
     public DbSet<Costume> Costumes { get; set; }
 
+    public DbSet<CostumeImage> CostumeImages { get; set; }
+
+    public DbSet<CostumeTag> CostumeTags { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+    public DbSet<Tag> Tags {  get; set; }
+    public DbSet<User> Users { get; set; }
+
     #endregion
 }
